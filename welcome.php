@@ -18,7 +18,7 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // prepare sql and bind parameters
-  $stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email)
+  $stmt = $conn->prepare("INSERT INTO myDB.MyGuests (firstname, lastname, email)
   VALUES (:firstname, :lastname, :email)");
   $stmt->bindParam(':firstname', $firstname);
   $stmt->bindParam(':lastname', $lastname);
@@ -54,7 +54,7 @@ class TableRows extends RecursiveIteratorIterator {
 try {
   $conn = new PDO("pgsql:host=$servername;port=$port;dbname=$dbname;user=$username;password=$password");
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $conn->prepare("SELECT id, firstname, lastname FROM MyGuests");
+  $stmt = $conn->prepare("SELECT id, firstname, lastname FROM myDB.MyGuests");
   $stmt->execute();
 
   // set the resulting array to associative
