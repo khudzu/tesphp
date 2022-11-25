@@ -3,7 +3,7 @@
 
 Welcome <?php echo $_POST["firstname"]; ?><br>
 Your email address is: <?php echo $_POST["email"]; 
-
+echo "<br>";
 $servername = "ec2-44-205-177-160.compute-1.amazonaws.com";
 $username = "wiqcpqtbjgubpp";
 $password = "590b5408824d642f770d24a7df47d4a5d803b4db77330e9cba751c9c5e2c1b60";
@@ -25,9 +25,9 @@ try {
   $stmt->bindParam(':email', $email);
   $stmt->execute();
 
-  echo "New records created successfully";
+    echo "New records created successfully";
 } catch(PDOException $e) {
-  echo "" ;
+  echo "Error: " . $e->getMessage();
 }
 echo "<table style='border: solid 1px black;'>";
 echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
@@ -62,7 +62,7 @@ try {
     echo $v;
   }
 } catch(PDOException $e) {
-  echo "" ;
+  echo "Error: " . $e->getMessage();
 }
 
 $conn = null;
