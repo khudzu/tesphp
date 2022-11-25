@@ -23,7 +23,6 @@ try {
   $stmt->bindParam(':firstname', $firstname);
   $stmt->bindParam(':lastname', $lastname);
   $stmt->bindParam(':email', $email);
-
   $stmt->execute();
 
   echo "New records created successfully";
@@ -65,9 +64,8 @@ try {
 } catch(PDOException $e) {
   echo "Error: " . $e->getMessage();
 }
+
 $conn = null;
-
 ?>
-
 </body>
 </html>
