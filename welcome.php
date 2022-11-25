@@ -27,7 +27,7 @@ try {
 
   echo "New records created successfully";
 } catch(PDOException $e) {
-  echo "Error: " . $e->getMessage();
+  echo "" ;
 }
 echo "<table style='border: solid 1px black;'>";
 echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
@@ -62,7 +62,7 @@ try {
     echo $v;
   }
 } catch(PDOException $e) {
-  echo "Error: " . $e->getMessage();
+  echo "" ;
 }
 
 $conn = null;
