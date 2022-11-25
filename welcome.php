@@ -7,7 +7,7 @@ Your email address is: <?php echo $_POST["email"];
 $servername = "ec2-44-205-177-160.compute-1.amazonaws.com";
 $username = "wiqcpqtbjgubpp";
 $password = "590b5408824d642f770d24a7df47d4a5d803b4db77330e9cba751c9c5e2c1b60";
-$port="5432"
+$port="5432";
 $dbname = "dcgklg4avopfb3";
 $firstname=$_POST["firstname"];
 $lastname=$_POST["lastname"];
